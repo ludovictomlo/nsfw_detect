@@ -1,0 +1,25 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.url-input {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.canvas-container {
+  text-align: center;
+}
+.original-img-container {
+  text-align: center;
+}
+.original-img-container img:first-child {
+  /* max-width: 500px; */
+}
+.original-img-container img:last-child {
+  visibility: hidden;
+}

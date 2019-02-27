@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  div.url-input
+    input#file_url(type='text')
+    button#submit Submit
+
+  div.canvas-container
+    p Processed image:
+    canvas#canvas
+
+  div.original-img-container
+    p Original image:
+    image#img
+    image#original
