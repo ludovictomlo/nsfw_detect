@@ -36,7 +36,8 @@ $(document).on('click', '#submit', function() {
 
           for(var i = 0; i < detections.length; i++) {
             var box = detections[i].bounding_box;
-            if(detections[i].confidence >= 0.6)
+            // console.log('(detections[i].name.toLowerCase()).indexOf(covered)', (detections[i].name.toLowerCase()).indexOf('Covered'));
+            if(detections[i].confidence >= 0.5 && (detections[i].name.toLowerCase()).indexOf('covered') < 0)
                 drawRect(box[0], box[1], box[2], box[3]);
           }
 
