@@ -1,4 +1,7 @@
 $(document).on('click', '#submit', function() {
+    var blurEffect = 2;
+    var saturationValue = 1;
+
     var img = document.getElementById("img");
     var originalImg = document.getElementById("original");
     var canvas = document.getElementById("canvas");
@@ -8,7 +11,7 @@ $(document).on('click', '#submit', function() {
 
     function drawRect(x, y, width, height) {
         context.fillStyle = "#FF0000";
-        context.fillRect(x, y, width, height);
+        context._blurRect(x, y, width, height, blurEffect, saturationValue);
     }
     function getResizedCoords(x, y, width, height) {
     }
@@ -19,6 +22,7 @@ $(document).on('click', '#submit', function() {
         context.drawImage(img, 0, 0, img.clientWidth, img.clientHeight);
     };
     img.src = file_url;
+    img.crossOrigin = 'Anonymous';
     originalImg.src = file_url;
 
     
